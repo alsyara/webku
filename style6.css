@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f9a7b7, #9bc5f9, #92c5dc);
+  color: #111;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4e4e4;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b84a5;
+}
+
+.logo .highlight {
+  color: #20b2aa;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0b82e6;
+}
+
+/* Container Tampak */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+/* Kartu Kontak */
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  margin: 20px;
+  transition: transform 0.3s, color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.contact-card .icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin-bottom: 10px;
+  }
+
+  .contact-container {
+    padding: 40px 10px;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .contact-card .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-container p {
+    font-size: 14px;
+  }
+}
